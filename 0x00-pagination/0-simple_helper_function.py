@@ -24,13 +24,12 @@ def index_range(page, page_size):
 
     Page numbers are 1-indexed, i.e. the first page is page 1.
     """
-    
+
     start = 0
     end = 0
     for i in range(page):
         start = end
         for j in range(page_size):
             end += 1
-
 
     return (start, end)
