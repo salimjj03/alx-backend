@@ -34,7 +34,7 @@ class LRUCache(BaseCaching):
         """
 
         if key in self.cache_data:
-            self.count[key] = 1
+            self.count[key] += 1
         if key is not None and item is not None and key not in self.cache_data:
             if len(self.cache_data) == BaseCaching.MAX_ITEMS:
                 high = 10000
